@@ -1,0 +1,163 @@
+Ans1:
+public class Pattern1 {
+
+	public static void main(String[] args) {
+		// print pattern for INEURON
+		int n=10;
+		for(int i=0; i<n; i++)
+        {
+			//Code for I
+        	for(int j=0; j<n;j++)
+        	{
+        		if(j==n/2)
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        		
+        	}
+        	//Code for N
+        	for(int j=0; j<n;j++)
+        	{
+        		if((j==0 && i>=0 && i<=n-1)|| (j==n-1 && i>=0 && i<=n-1) || i==j)
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        	}
+        	//Code for E
+        	for(int j=0; j<n;j++)
+        	{
+        		if((j==n/4 && i>0 && i<=n-1) || (i==0 && j<n-1 && j>=n/4) || (i==n/2 && j<n-1 && j>=n/4) || (i==n-1 && j<n-1 && j>=n/4))
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        		
+        	}
+        	//Code for U
+        	for(int j=0; j<n;j++)
+        	{
+        		if((j==n/4&& i>=0 && i<n-1) || (i==n-1 && j<n-1 && j>n/4) || (j==n-1 && i>=0 && i<n-1))
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        		
+        	}
+        	//Code for R
+        	for(int j=0; j<n;j++)
+        	{
+        		if(j==n/2 && i>=0 && i<=n || i==0 && j>=n/2 && j<=n-1 || j==n-1 && i>=0 && i<=n/2|| i==n/2 && j>=n/2 || i==j && i>=n/2 && j>=n/2)
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        		
+        			
+        		
+        	}
+        	//Code for O
+        	for(int j=0; j<n;j++)
+        	{
+        		if((j==n/4 && i<n-1 && i>0) || (i==0 && j<3*n/4 && j>n/4) || (j==3*n/4 && i<n-1 && i>0) || (i==n-1 && j<3*n/4 && j>n/4))
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        		
+        	}
+        	//Code for N
+        	for(int j=0; j<n;j++)
+        	{
+        		if((j==0 && i>=0 && i<=n-1)|| (j==n-1 && i>=0 && i<=n-1) || i==j)
+        			System.out.print("*");
+        		else
+        			System.out.print(" ");
+        		
+        	}
+        	System.out.println();
+        }
+	}
+
+}
+
+
+Ans 2:
+public class Pattern2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub;
+		int n=4;
+		for (int i=1; i<=n;i++)
+		{
+			for (int j=1; j<=n;j++)
+			{
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+
+	}
+
+}
+
+
+Ans 3.
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       int n=17;
+       for(int i=0; i<n;i++)
+       {
+    	   for(int j=0;j<n;j++)
+    	   {
+    		   if(j==0 || i==0 || j==n-1 || i==n-1 || (i+j)<=n/2  || (j-i >=n/2 )) 
+    			   System.out.print("*");
+    		   else
+    			   System.out.print(" ");
+    	   }
+    	   System.out.println();
+       }
+       
+	}
+
+}
+
+
+Ans 4.
+public class Pattern4 extends Pattern1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=15;
+	       for(int i=0; i<n;i++)
+	       {
+	    	   for(int j=0;j<n;j++)
+	    	   {
+	    		   if(i==n-1 || (j==0 && i>=n/2) || (j==n-1 && i>=n/2) || ((i-j)>=n/2) || i+j >= n-1 +(n-1)/2) 
+	    			   System.out.print("*");
+	    		   else
+	    			   System.out.print(" ");
+	    	   }
+	    	   System.out.println();
+	       }
+
+	}
+
+}
+
+
+Ans5.
+public class Pattern5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=17;
+	       for(int i=0; i<n;i++)
+	       {
+	    	   for(int j=0;j<n;j++)
+	    	   {
+	    		   if(j==0 || i==0 || i==n-1 || i+j <= n/2 || i-j >= n/2) 
+	    			   System.out.print("*");
+	    		   else
+	    			   System.out.print(" ");
+	    	   }
+	    	   System.out.println();
+	       }
+	}
+
+}
